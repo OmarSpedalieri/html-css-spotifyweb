@@ -1,7 +1,7 @@
 /* regole generali */
 
 img {
-  max-width: 100%;
+  max-width: 150px;
   height: auto;
 }
 
@@ -17,80 +17,136 @@ img {
 div, nav{
   border: solid 1px red;
 }
+
+
+.font_white{
+  color:white;
+}
+
+.font_grey{
+  color:lightgrey;
+}
 /* **************  CREAZIONE MACROSTRUTTURA  ************** */
 
 
 #total_viewport{
-
   width: 100vw;
   height: 100vh;
-  /* background-color: red; */
 }
 
 
 /* ***************** side section*********** */
 #SIDE_SECTION{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px 10px;
+
+
 
   width:200px;
   height: calc(100vh - 80px);
   background-color: black;
 }
 
+/* .logo, #home, #playlist, #{
+
+} */
+#home{
+  align-items: flex-start;
+  color:white;
+
+}
+
+#playlist{
+  flex-grow: 2;
+  color:white;
+
+}
+#installa{
+
+  color:white;
+
+}
 
 
 /* ********main section********** */
 
 #MAIN_SECTION{
-  display: flex;
-  flex-direction: column;
   width: calc(100vw - 200px);
   height :calc(100vh - 80px);
   background-color: #141922;
 }
 
-#UPGRADE{
+#upgrade_button{
+text-align: right;
 
+  width: 250px;
+  height: 40px;
+  border: solid 1px white;
+  border-radius: 20px;
+
+}
+#UPGRADE{
   width: 100%;
+  position: fixed;
+  /* display: flex;
+
+  align-items: center; */
+  /* width: 100%; */
   height: 80px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 #song_menu{
+  display: flex;
+  justify-content:space-around;
+  padding: 0 25%;
+
   width: 100%;
   height:50px;
-  background-color: red);
+  /* background-color: red); */
 
 
 }
 #SONGS{
+  margin-top: 80px;
   width: 100%;
   min-height: calc(100% - 80px) ;
   background-color: lightgreen;
+  overflow: auto;
 
 }
 
-#titoli{
+li{
+
+  list-style: none;
+
+}
+#raccolte{
   padding: 2% 2%;
   display: flex;
-  flex-direction: row;
-  /* justify-content:flex-start ; */
-  justify-content:space-around;
+  align-items: flex-start;
 
   flex-wrap: wrap;
 
+  overflow: hidden;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: yellow; */
 
-  width: 100%;
-  height: 100%;
-  background-color: yellow;
 }
 
 .album_box{
-  width: 150px;
-  height: 150px;
+  text-align: center;
+  margin-right: 15px;
+  width: calc(100% / 6 )-15px;
+  height:auto;
   background-color: white;
 
 }
 .titolo_blocco{
-  padding: 2% 2%;
+  padding: 20px 20px;
 }
 
 
@@ -110,15 +166,17 @@ div, nav{
 
 
 /* Small devices (tablets,991px and up) */
-@media screen and (max-width: 1150px) {
-
+@media screen and (max-width: 1390px) {
   .album_box{
-    width: 25%;
-    height: calc( 100% / 4);
+
+    width: calc(100% / 4 )-15px;
 
 
 
   }
+
+
+
 
 
  @media screen and (max-width: 767px) {
