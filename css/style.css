@@ -36,10 +36,10 @@ div, nav{
 /* **************  CREAZIONE MACROSTRUTTURA  ************** */
 
 
-#total_viewport{
+/* #total_viewport{
   width: 100vw;
   height: 100vh;
-}
+} */
 
 
 /* ***************** side section*********** */
@@ -47,6 +47,7 @@ div, nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: fixed;
 
   padding: 10px 10px;
 
@@ -57,23 +58,50 @@ div, nav{
   background-color: black;
 }
 
+a {
+  text-decoration: none;
+  color:#7d7f84;
+}
+a:hover{
+  color: white;
+}
+
+ #home a, #playlist a,#installa a{
+   display: block;
+
+
+ }
 
 #home{
   align-items: flex-start;
   color:white;
-
 }
+#home img {
+  max-width: 25px;
+}
+
+
 
 #playlist{
   flex-grow: 2;
   color:white;
 
 }
-#installa{
 
-  color:white;
 
+#installa img {
+  max-width: 10px;
+  margin-right: 5px;
 }
+
+.profile{
+  font-weight: bold;
+  color: white;
+}
+
+
+
+
 
 
 /* ********main section********** */
@@ -81,6 +109,7 @@ div, nav{
 #MAIN_SECTION{
   width: calc(100vw - 200px);
   height :calc(100vh - 80px);
+  margin-left: 200px;
   background-color: #141922;
   overflow: auto;
 
@@ -94,8 +123,6 @@ div, nav{
 
 }
 #UPGRADE{
-
-  /* perchè ho dovuto reinserire la larghezza che è già dentro un contenitore */
   width: calc(100vw - 200px);
   position: fixed;
   display: flex;
@@ -113,9 +140,10 @@ div, nav{
   font-weight: bold;
   color:#7d7f84;
   flex-shrink: 0;
-
-
 }
+
+
+
 
 #SONGS{
   margin-top: 80px;
@@ -130,29 +158,14 @@ div, nav{
 }
 
 
-li{
 
-  list-style: none;
 
-}
-
-/* #albums{
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-} */
 
 #raccolte{
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
 
-
-
-
-  /* overflow: auto; */
-  /* width: 100%; */
-  /* height: 100%; */
   background-color: yellow;
 }
 
@@ -177,10 +190,9 @@ li{
 
 
 
-/* ***************BOTTOM SECTION******************* */
+/* ***********************  BOTTOM SECTION************************* */
 
 #BOTTOM_SECTION{
-
   position: fixed;
   display: flex;
   align-items: center;
@@ -188,60 +200,109 @@ li{
   width: 100%;
   height: 80px;
   background-color: #282828;
-
 }
 
+
+/* ********** LEFT SIDE TITLE****************** */
 #titolo_brano{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 200px;
-
   padding: 5px 5px;
-  background-color: white;
 }
 
 #titolo_brano img{
   max-width: 50px;
   height: auto;
-
 }
 
 .titolo_e_artista{
   flex-grow:1;
 }
 
+.icons{
+  margin: 0 10px;
+  font-size:1.2rem;
+  font-weight: bold;
+  color:#7d7f84;
+}
 
 
-
+/* ********** CENTRAL PLAYER AND BARS****************** */
 #player{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 200px;
-  background-color: white;
   flex-grow: 1;
 }
 
 #comandi_player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 30%; */
   width: 60%;
-  height: 30px;
-  background-color: red;
+  height: 35px;
 }
+
 
 #barra_player{
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7d7f84;
   width: 60%;
   height: 30px;
-  background-color: red
 }
 
-#volume{
-  width: 200px;
-  padding: 5px 5px;
-  background-color: white;
+.player_icons{
+  margin: 0 10px;
+  font-size:1rem;
+  color:white;
 }
+
+.barra_base{
+  display: inline-block;
+  width:350px;
+  height: 5px;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: #7d7f84;
+}
+
+.barra_avanzamento{
+  display: inline-block;
+  position: relative;
+  left:15px;
+  width:150px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #c1c1c1;
+}
+
+
+/* ********** VOLUME RIGHT SIDE****************** */
+
+.volume{
+  width: 25%;
+}
+.volume_icons{
+  font-size: .5rem;
+  color: white;
+}
+
+
+#volume{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 200px;
+  /* padding: 5px 5px; */
+}
+
 
 
 /* ********  MEDIA QUERY  ********* */

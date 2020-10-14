@@ -13,39 +13,33 @@
   </head>
 
   <body>
+ <main>
 
-    <div id="total_viewport">
 
 
-      <!-- ROW CON MENU E TITOLI -->
-      <div class="row">
 
-        <div id="SIDE_SECTION">
+
+      <!-- aside CON MENU E TITOLI -->
+
+
+        <aside id="SIDE_SECTION">
           <div class="logo">
             <img src="img/logo.svg" alt="">
-
           </div>
 
           <div id="home">
-            <h3><i class="fas fa-home"></i> Home</h3>
-            <h3><i class="fas fa-search"></i> cerca</h3>
-            <h3><i class="fas fa-book-open"></i></i> la tua libreria</h3>
-
-
-
-
-
+            <a href="#"><img src="img/home.svg" alt="home">Home</a>
+            <a href="#"><img src="img/search.svg" alt="home">Cerca</a>
+            <a href="#"><img src="img/libreria.svg" alt="home">La tua libreria</a>
           </div>
 
           <div id="playlist">
-
-            <p>playlist</p>
-            <p>playlist</p>
-            <p>playlist</p>
-            <p>playlist</p>
-            <p>playlist</p>
-            <p>playlist</p>
-
+            <a href="#">Playlist</a>
+            <a href="#">Playlist</a>
+            <a href="#">Playlist</a>
+            <a href="#">Playlist</a>
+            <a href="#">Playlist</a>
+            <a href="#">Playlist</a>
 
 
 
@@ -53,20 +47,20 @@
 
           <div id="installa">
 
-            <p>playlist</p>
-            <p>playlist</p>
+            <a href="#"><img src="img/download.svg" alt="home">Installa app</a>
+            <hr>
+            <a href="#" class="profile"><img src="img/profile.svg" alt="home" >John Doe</a>
+
+          </iv>
 
 
-          </div>
 
 
 
+        </aside>
 
 
-        </div>
-
-
-        <div id="MAIN_SECTION">
+        <section id="MAIN_SECTION">
 
           <div id="UPGRADE">
             <div id="upgrade_button">
@@ -79,12 +73,14 @@
           <section id="SONGS">
 
             <nav id="song_menu">
-              <div class="menu">IN EVIDENZA</div>
-              <div class="menu">PODCAST</div>
-              <div class="menu">CLASSIFICHE</div>
-              <div class="menu">GENERI E MOOD</div>
-              <div class="menu">NUOVE USCITE</div>
-              <div class="menu">SCOPRI</div>
+
+              <a href="#" class="menu">IN EVIDENZA</a>
+              <a href="#" class="menu">PODCAST</a>
+              <a href="#" class="menu">CLASSIFICHE</a>
+              <a href="#" class="menu">GENERI E MOOD</a>
+              <a href="#" class="menu">NUOVE USCITE</a>
+              <a href="#" class="menu">SCOPRI</a>
+
 
             </nav>
 
@@ -182,13 +178,16 @@
 
             </div>
           </section>
+        </section>
 
 
 
         </div>
 
       </div>
+</main>
 
+<footer>
         <!-- PLAYER CONTROL -->
 
 
@@ -199,12 +198,12 @@
               <img src="img/sinister.jpeg" alt="">
             </div>
 
-            <div class="titolo_e_artista">
+            <div class="titolo_e_artista menu">
               <h3>Sinister</h3>
               <h5>Mannaggia</h5>
             </div>
 
-            <div class="">
+            <div class="icons">
               <i class="far fa-heart"></i>
               <i class="far fa-folder"></i>
 
@@ -213,19 +212,47 @@
 
           <div id="player">
 
-            <div id="comandi_player"></div>
+            <div id="comandi_player">
 
-            <div id="barra_player"></div>
+                <a href="#"><i class="fas fa-random player_icons"></i></a>
+                <a href="#"><i class="fas fa-step-backward player_icons"></i></a>
+                <a href="#"><i class="far fa-play-circle player_icons"></i></a>
+                <a href="#"><i class="fas fa-step-forward player_icons"></i></a>
+                <a href="#"><i class="fas fa-redo-alt player_icons"></i></a>
+
+            </div>
+
+            <div id="barra_player">
+              <span>1.02</span>
+              <div class="barra_avanzamento"></div>
+              <div class="barra_base"></div>
+              <span>4.52</span>
+            </div>
 
           </div>
 
-          <div id="volume"></div>
+          <div id="volume">
+              <a href="#"><i class="fas fa-list volume_icons"></i></a>
+              <a href="#"><i class="fas fa-desktop volume_icons"></i></a>
+              <a href="#"><i class="fas fa-volume-up volume_icons"></i></a>
+              <div class="barra_avanzamento volume"></div>
+              <div class="barra_base volume"></div>
+
+
+
+
+
+
+
+
+
+          </div>
 
         </div>
 
 
+</footer>
 
-    </div>
 
   </body>
 </html>
