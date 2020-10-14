@@ -1,5 +1,7 @@
 /* regole generali */
-
+body{
+  font-size: 15px;
+}
 img {
   max-width: 150px;
   height: auto;
@@ -14,11 +16,6 @@ img {
   display: flex;
 
 }
-div, nav{
-  border: solid 1px red;
-  /* min-height: 60px; */
-}
-
 
 .font_white{
   color:white;
@@ -27,6 +24,15 @@ div, nav{
 .font_grey{
   color:lightgrey;
 }
+
+/* **************DEBUGGING ***************** */
+div, nav{
+  border: solid 1px red;
+
+}
+
+
+
 /* **************  CREAZIONE MACROSTRUTTURA  ************** */
 
 
@@ -51,9 +57,7 @@ div, nav{
   background-color: black;
 }
 
-/* .logo, #home, #playlist, #{
 
-} */
 #home{
   align-items: flex-start;
   color:white;
@@ -78,46 +82,53 @@ div, nav{
   width: calc(100vw - 200px);
   height :calc(100vh - 80px);
   background-color: #141922;
+  overflow: auto;
+
 }
 
 #upgrade_button{
-text-align: center;
-
-  width: 250px;
-  height: 40px;
+  text-align: center;
+  width: 200px;
   border: solid 1px white;
   border-radius: 20px;
 
 }
 #UPGRADE{
-  width: 100%;
+
+  /* perchè ho dovuto reinserire la larghezza che è già dentro un contenitore */
+  width: calc(100vw - 200px);
   position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* width: 100%; */
+  padding: 0 20px;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(20, 25, 34, 0.5);
 }
-#song_menu{
-  display: flex;
-  justify-content:space-around;
-  padding: 0 25%;
 
-  width: 100%;
-  height:50px;
-  /* background-color: red); */
+
+.menu{
+  margin: 0 5px;
+  font-size:.8rem;
+  font-weight: bold;
+  color:#7d7f84;
+  flex-shrink: 0;
 
 
 }
+
 #SONGS{
   margin-top: 80px;
   width: 100%;
   min-height: calc(100% - 80px) ;
   background-color: lightgreen;
-  overflow: auto;
-
 }
+
+#song_menu{
+  display: flex;
+  justify-content:center;
+}
+
 
 li{
 
@@ -125,31 +136,37 @@ li{
 
 }
 
-#albums{
+/* #albums{
   display: flex;
   align-items: flex-start;
-
   flex-wrap: wrap;
+} */
 
-}
 #raccolte{
   padding: 10px 10px;
-  /* display: flex;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 
-  flex-wrap: wrap; */
 
-  overflow: hidden;
+
+
+  /* overflow: auto; */
   /* width: 100%; */
   /* height: 100%; */
-  /* background-color: yellow; */
+  background-color: yellow;
+}
+
+#recently_played{
+  display: flex;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
 
 }
 
 .album_box{
   text-align: center;
   margin-right: 15px;
-  width: calc(100% / 6 )-15px;
+  max-width: calc(100% / 6 )-15px;
   height:auto;
   background-color: white;
 
@@ -175,11 +192,28 @@ li{
 }
 
 #titolo_brano{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 200px;
+
   padding: 5px 5px;
   background-color: white;
+}
+
+#titolo_brano img{
+  max-width: 50px;
+  height: auto;
 
 }
+
+.titolo_e_artista{
+  flex-grow:1;
+}
+
+
+
+
 #player{
   display: flex;
   flex-direction: column;
