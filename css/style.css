@@ -5,7 +5,8 @@ body{
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 200px;
   height: auto;
 }
 
@@ -21,14 +22,14 @@ img {
 }
 
 .font_grey{
-  color:lightgrey;
+  color:#7d7f84;
 }
 
 /* **************DEBUGGING ***************** */
-div, nav{
+/* div, nav{
   border: solid 1px red;
 
-}
+} */
 
 
 
@@ -41,7 +42,7 @@ div, nav{
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  padding: 10px 10px;
+  padding: 20px ;
   width:200px;
   height: calc(100vh - 80px);
   background-color: black;
@@ -57,11 +58,14 @@ a:hover{
 
  #home a, #playlist a,#installa a{
    display: block;
-
-
+   font-weight: bold;
+   font-size: .5rem;
+   margin: 5px 0;
  }
 
 #home{
+  display: flex;
+  flex-direction:column;
   align-items: flex-start;
   color:white;
 }
@@ -70,11 +74,20 @@ a:hover{
 }
 
 
+.PLUS{
+  font-size: 30px;
+}
+
 
 #playlist{
+  padding:10px 0;
   flex-grow: 2;
   color:white;
 
+}
+
+#playlist a{
+  margin: 20px 0;
 }
 
 
@@ -125,6 +138,13 @@ a:hover{
 }
 
 
+
+#SONGS{
+  margin-top: 80px;
+  width: 100%;
+  /* background-color: lightgreen; */
+}
+
 .menu{
   margin: 0 5px;
   font-size:.8rem;
@@ -134,17 +154,8 @@ a:hover{
 }
 
 
-#albums{
-
-  max-width:  calc(100% /6 );
-  background-color: green;
-}
-
-#SONGS{
-  margin-top: 80px;
-  width: 100%;
-  /* min-height: calc(100% - 80px) ; */
-  background-color: lightgreen;
+#album{
+  display: flex;
 }
 
 #song_menu{
@@ -158,11 +169,12 @@ a:hover{
 
 #raccolte{
   padding: 10px 10px;
-  display: flex;
-  flex-direction: column;
-
-  background-color: yellow;
+  /* display: flex;
+  flex-direction: column; */
+  /* background-color: yellow; */
 }
+
+
 
 #recently_played{
   display: flex;
@@ -171,30 +183,37 @@ a:hover{
 
 }
 
+#album h5, #album h3{
+  margin: 10px 0;
+}
+
+
 .album_box{
   text-align: center;
   margin-right: 15px;
-  max-width: calc(100% / 6 )-15px;
+  /* max-width: calc(100% / 6 )-15px; */
+}
 
-  background-color: white;
-
+.titolo_album{
+  max-width: 200px;
+  color:white;
+  font-size: 1rem;
 }
 
 .titolo_raccolta{
+  margin: 30px 0 ;
   padding: 10px 0;
+  color: white;
 }
 
 
 /* --------------debugging------------------------ */
-#album{
-  display: flex;
-  /* justify-content: space-around; */
-}
 
-#album div{
+
+/* #album div{
 
   background-color: red;
-}
+} */
 
 
 
@@ -225,22 +244,22 @@ a:hover{
 }
 
 
-/* ********** LEFT SIDE TITLE****************** */
+/* ********** BRANO IN CORSO ****************** */
 #titolo_brano{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 200px;
+  max-width: 200px;
   padding: 5px 5px;
 }
 
 #titolo_brano img{
   max-width: 50px;
-  height: auto;
+  min-width: 50px;
 }
 
 .titolo_e_artista{
-  flex-grow:1;
+  max-width: 100px;
 }
 
 .icons{
@@ -249,7 +268,6 @@ a:hover{
   font-weight: bold;
   color:#7d7f84;
 }
-
 
 /* ********** CENTRAL PLAYER AND BARS****************** */
 #player{
@@ -267,7 +285,7 @@ a:hover{
   align-items: center;
   width: 60%;
   font-size: 1rem;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 
@@ -332,18 +350,45 @@ a:hover{
 
 
 /* Small devices (tablets,991px and up) */
-@media screen and (max-width: 1390px) {
-
-
-    /* width: calc(100% / 4 )-15px; */
+@media screen and (min-width: 768px)and (max-width: 1100px) {
 
 
 
+  #album{
+    flex-wrap: wrap;
+  }
+
+
+  .album_box{
+
+    max-width:150px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .titolo_album{
+    max-width: 150px;
+    color:white;
+    font-size: .8rem;
+  }
 
 
 
 
 
+
+
+
+
+
+
+
+
+}
 
  @media screen and (max-width: 767px) {
 
