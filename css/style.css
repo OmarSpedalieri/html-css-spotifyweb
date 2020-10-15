@@ -26,10 +26,10 @@ img {
 }
 
 /* **************DEBUGGING ***************** */
-/* div, nav{
+div, nav{
   border: solid 1px red;
 
-} */
+}
 
 
 
@@ -46,6 +46,7 @@ img {
   width:200px;
   height: calc(100vh - 80px);
   background-color: black;
+  overflow: auto;
 }
 
 a {
@@ -81,8 +82,10 @@ a:hover{
 
 #playlist{
   padding:10px 0;
-  flex-grow: 2;
+  flex-grow: 1;
   color:white;
+
+
 
 }
 
@@ -94,6 +97,7 @@ a:hover{
 #installa img {
   max-width: 10px;
   margin-right: 5px;
+  /* flex-shrink: 0; */
 }
 
 .profile{
@@ -114,18 +118,8 @@ a:hover{
   margin-left: 200px;
   background-color: #141922;
   overflow: auto;
-
 }
 
-#upgrade_button{
-  text-align: center;
-  padding-top: 8px;
-  width: 200px;
-  min-height: 35px;
-  border: solid 1px white;
-  border-radius: 20px;
-
-}
 #UPGRADE{
   width: calc(100vw - 200px);
   position: fixed;
@@ -138,29 +132,91 @@ a:hover{
 }
 
 
+/* **************  BOTTONE UPGRADE E ANIMAZIONE************** */
+
+#upgrade_button{
+  text-align: center;
+  padding-top: 8px;
+  width: 200px;
+  min-height: 35px;
+  border: solid 1px white;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+#upgrade_button:hover{
+  text-align: center;
+  cursor: pointer;
+  width: 210px;
+  height: 45px;
+  padding-top: 13px;
+}
+
+
+
+
+
+.menu_selected_01, .menu_selected_02, .menu_selected_03, .menu_selected_04, .menu_selected_05, .menu_selected_06{
+  text-align: center;
+  width:40px;
+  height: 3px;
+  margin:auto;
+  border-radius: 5px;
+  background: rgba(173, 255, 47, 1 ) ;
+  display: none;
+
+}
+
+/* #song_menu a:hover{
+
+  display: block;
+} */
+
+/* a:active {
+  color: #FF5C00;
+
+} */
+
+
 
 #SONGS{
   margin-top: 80px;
-  width: 100%;
-  /* background-color: lightgreen; */
+  /* width: 100%; */
+
 }
 
 .menu{
+  max-height: 15px;
   margin: 0 5px;
   font-size:.8rem;
   font-weight: bold;
   color:#7d7f84;
-  flex-shrink: 0;
+
+
+  /* flex-shrink: 0; */
 }
+
+
+
 
 
 #album{
   display: flex;
+  justify-content: flex-start;
+
+
+
 }
 
 #song_menu{
+  max-width: calc(100vw - 200px);
   display: flex;
   justify-content:center;
+  align-items: baseline;
+}
+
+.menu_item{
+flex-shrink: 0;
 }
 
 
@@ -176,12 +232,12 @@ a:hover{
 
 
 
-#recently_played{
+/* #recently_played{
   display: flex;
   align-items: flex-start;
-  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap;
 
-}
+} */
 
 #album h5, #album h3{
   margin: 10px 0;
@@ -189,12 +245,13 @@ a:hover{
 
 
 .album_box{
+  max-width: calc(100% / 6);
   text-align: center;
-  margin-right: 15px;
-  /* max-width: calc(100% / 6 )-15px; */
+  margin-right: calc((100% / 6)/6);
 }
 
 .titolo_album{
+  margin: auto;
   max-width: 200px;
   color:white;
   font-size: 1rem;
@@ -204,6 +261,10 @@ a:hover{
   margin: 30px 0 ;
   padding: 10px 0;
   color: white;
+}
+
+.rounded{
+  border-radius: 50%;
 }
 
 
@@ -349,49 +410,52 @@ a:hover{
 /* ********  MEDIA QUERY  ********* */
 
 
-/* Small devices (tablets,991px and up) */
-@media screen and (min-width: 768px)and (max-width: 1100px) {
+
+@media screen and (min-width: 878px)and (max-width: 1400px) {
 
 
+
+  .menu{
+    font-size:.6rem;
+  }
 
   #album{
     flex-wrap: wrap;
   }
 
-
   .album_box{
-
-    max-width:150px;
-  }
-
-  img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+    max-width: calc(100% / 4);
+    /* margin-right:30px; */
   }
 
   .titolo_album{
-    max-width: 150px;
-    color:white;
     font-size: .8rem;
   }
 
+}
+
+
+
+
+@media screen and (min-width: 639px) and (max-width:877px){
+
+#song_menu{
+  flex-wrap: wrap;
+}
+
+.menu{
+  font-size:.4rem;
+}
 
 
 
 
 
+@media screen and (min-width: 552px) and (max-width:638px){
 
-
-
-
-
+  #song_menu{
+    flex-wrap: wrap;
+  }
 
 
 }
-
- @media screen and (max-width: 767px) {
-
-
-
- }
