@@ -53,7 +53,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  padding: 20px ;
+  padding: 2px ;
   width:50px;
   height: calc(100vh - 80px);
   background-color: black;
@@ -95,9 +95,27 @@ a:hover{
   align-items: flex-start;
   color:white;
 }
+
 #home img {
-  max-width: 25px;
+  display: flex;
+  max-width: 35px;
 }
+
+#home div{
+  display: flex;
+  width: 3px;
+  height: 30px;
+  background-color: lightgreen;
+  transition: .1s ;
+  opacity: 1;
+}
+
+
+
+.menu_item:hover .menu_selected{
+  opacity: 1;
+}
+
 
 
 
@@ -120,9 +138,6 @@ a:hover{
   flex-grow: 1;
   color:white;
   overflow: auto;
-
-
-
 }
 
 #playlist a{
@@ -209,6 +224,12 @@ a:hover{
 
 
 .menu_item:hover .menu_selected{
+  opacity: 1;
+}
+
+
+
+#home.menu_item:hover .menu_selected{
   opacity: 1;
 }
 
@@ -337,25 +358,6 @@ flex-shrink: 0;
   opacity: .3;
 }
 
-/* --------------debugging------------------------ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ***********************  BOTTOM SECTION************************* */
 
@@ -414,7 +416,7 @@ flex-shrink: 0;
   min-width: 25%;
   font-size: 1rem;
   min-height: 60%;
-  /* background-color: pink; */
+
 }
 
 
@@ -608,53 +610,12 @@ flex-shrink: 0;
    font-size: .6rem;
   }
 
-  /* * ***** SCOMPARSA SIDEBAR ********** tentativo modificandola  */
-  /* #SIDE_SECTION{
-    width: 50px;
-    padding:5px;
-  }
-
-  .big_logo{
-    display: none;
-  }
-
-  .small_logo{
-    display: block;
-  }
-
-  #home a{
-    display: none;
-  }
-
-  #home img{
-    display: flex;
-  }
-
-
-  #playlist a, #playlist h5{
-    display: none;
-  }
-
-  #installa a{
-    display: none;
-  }
-
-  #installa img{
-    flex-basis: 50%;
-    display: block;
-  }
-
-  #installa hr{
-    display: none;
-  } */
-
-
 
   /* * ***** SCOMPARSA SIDEBAR ********** tentativo sosstituendola  */
   #SIDE_SECTION_SMALL{
     display:flex;
     width: 40px;
-    padding:5px;
+
   }
 
   #SIDE_SECTION{
@@ -670,22 +631,15 @@ flex-shrink: 0;
 
   #song_menu{
     max-width: calc(100vw - 40px);
-    
+
   }
 
   #UPGRADE{
     width: calc(100vw - 40px);
-    /* position: fixed;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.5); */
+
   }
 
 
-  }
 
 
 
