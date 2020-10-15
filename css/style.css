@@ -23,6 +23,13 @@ img {
 .font_grey{
   color:#7d7f84;
 }
+a {
+  text-decoration: none;
+  color:#7d7f84;
+}
+a:hover{
+  color: white;
+}
 
 /* **************DEBUGGING ***************** */
 /* div, nav{
@@ -35,7 +42,7 @@ img {
 /* **************  CREAZIONE MACROSTRUTTURA  ************** */
 
 
-/* ***************** side section*********** */
+/* ***************** SIDE SECTION BIG*********** */
 #SIDE_SECTION{
   display: flex;
   flex-direction: column;
@@ -48,10 +55,57 @@ img {
 }
 
 
+ #home a, #playlist a,#installa a{
+   display: block;
+   font-weight: bold;
+   font-size: .5rem;
+   margin: 5px 0;
+ }
+
+ #home img {
+   max-width: 35px;
+ }
+
+
+ .PLUS{
+  font-size: 30px;
+ }
+
+ .logo{
+   width: 70%;
+   height: auto;
+   margin: 5% 0;
+ }
+
+ #playlist{
+   padding:10px 0;
+   flex-grow: 1;
+   color:white;
+   overflow: auto;
+ }
+
+ #playlist a{
+   margin: 20px 0;
+ }
+
+
+ #installa img {
+   max-width: 10px;
+   margin-right: 5px;
+ }
+
+ .profile{
+   font-weight: bold;
+   color: white;
+ }
+
+
+/* ***************** SIDE SECTION SMALL********** */
 #SIDE_SECTION_SMALL{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   padding: 2px ;
   width:50px;
@@ -62,99 +116,48 @@ img {
 
 
 #SIDE_SECTION_SMALL a{
-  min-width: 30px;
-}
- #SIDE_SECTION_SMALL img{
-  min-width: 10px;
+  width:30px;
+
 }
 
 .small_logo{
   width: 100%;
   min-height: 30px;
-  display: block;
+  padding: 5px;
+
 }
 
-a {
-  text-decoration: none;
-  color:#7d7f84;
-}
-a:hover{
-  color: white;
-}
-
- #home a, #playlist a,#installa a{
-   display: block;
-   font-weight: bold;
-   font-size: .5rem;
-   margin: 5px 0;
- }
-
-#home{
+#home_small{
+  position: relative;
   display: flex;
   flex-direction:column;
-  align-items: flex-start;
+  justify-content: flex-start;
   color:white;
 }
 
-#home img {
+#installa_small{
   display: flex;
-  max-width: 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+#installa_small img{
 
-#home div{
-  display: flex;
-  width: 3px;
-  height: 30px;
-  background-color: lightgreen;
-  transition: .1s ;
-  opacity: 1;
-}
+  max-width: 15px;
 
-
-
-.menu_item:hover .menu_selected{
-  opacity: 1;
 }
 
 
 
 
 
-.PLUS{
-  font-size: 30px;
-}
-
-.logo{
-  width: 70%;
-  height: auto;
-  margin: 5% 0;
-}
-
-.small_logo{
-  display: none;
-}
-#playlist{
-  padding:10px 0;
-  flex-grow: 1;
-  color:white;
-  overflow: auto;
-}
-
-#playlist a{
-  margin: 20px 0;
-}
 
 
-#installa img {
-  max-width: 10px;
-  margin-right: 5px;
-  /* flex-shrink: 0; */
-}
 
-.profile{
-  font-weight: bold;
-  color: white;
-}
+
+
+
+
 
 
 
@@ -229,9 +232,6 @@ a:hover{
 
 
 
-#home.menu_item:hover .menu_selected{
-  opacity: 1;
-}
 
 
 
