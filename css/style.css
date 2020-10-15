@@ -79,7 +79,15 @@ a:hover{
   font-size: 30px;
 }
 
+.logo{
+  width: 70%;
+  height: auto;
+  margin: 5% 0;
+}
 
+.small_logo{
+  display: none;
+}
 #playlist{
   padding:10px 0;
   flex-grow: 1;
@@ -157,10 +165,28 @@ a:hover{
 }
 
 
-.menu_selected_01{
+
+#song_menu a::after{
+  display: block;
+  height: 3px;
+  width:40px;
+  background-color: rgba(173, 255, 47, 1 ) ;
+  margin:auto;
+  border-radius: 5px;
+  transition: .1s ;
+  opacity: 1;
+
+
+}
+
+.menu_item:hover a{
+  opacity: 1;
+}
+
+/* .menu_selected_01{
   background: rgba(173, 255, 47, 1 ) ;
   text-align: center;
-  width:40px;
+
   height: 3px;
   margin:auto;
   border-radius: 5px;
@@ -170,40 +196,15 @@ a:hover{
 
 
 
-.menu_item:hover  .menu_item:last-child{
-
+.menu_item:hover .menu_item:last-child{
   opacity: 1;
-}
-
-
-
-
-
-/* .menu_selected_01, .menu_selected_02, .menu_selected_03, .menu_selected_04, .menu_selected_05, .menu_selected_06{
-  text-align: center;
-  width:40px;
-  height: 3px;
-  margin:auto;
-  border-radius: 5px;
-
-  display: none;
-
-} */
-
-/* #song_menu a:hover{
-
-  display: block;
-} */
-
-/* a:active {
-  color: #FF5C00;
-
 } */
 
 
 
 #SONGS{
   margin-top: 80px;
+  padding: 2% 1%;
   /* width: 100%; */
 
 }
@@ -214,9 +215,6 @@ a:hover{
   font-size:.8rem;
   font-weight: bold;
   color:#7d7f84;
-
-
-  /* flex-shrink: 0; */
 }
 
 
@@ -261,10 +259,10 @@ flex-shrink: 0;
 
 
 .album_box{
-
-  max-width: calc(100% / 6);
+  flex-basis: calc(100% / 6)-15px;
   text-align: center;
-  margin-right: calc((100% / 6)/6);
+  margin-right: 15px;
+
 
 }
 
@@ -487,7 +485,7 @@ flex-shrink: 0;
 
 /* * ************* ALBUM 4 SOPRA E 2 SOTTO*****************  */
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 800px) and (max-width: 1400px) {
 
 
   #album{
@@ -510,7 +508,7 @@ flex-shrink: 0;
  /* ************* ALBUM 2 SOPRA E 2 SOTTO*****************  */
 
 
- @media screen and (max-width: 550px) {
+ @media screen and (max-width: 552px) {
 
 
    #album{
@@ -524,6 +522,27 @@ flex-shrink: 0;
 
    .titolo_album{
      font-size: .4rem;
+   }
+
+
+   #SIDE_SECTION{
+     width: 50px;
+     padding: 5px;
+     justify-content:space-between;
+   }
+
+   .big_logo{
+     display: none;
+   }
+   .small_logo{
+
+     display: block;
+
+
+   }
+
+   #playlist{
+     display: none;
    }
 
  }
