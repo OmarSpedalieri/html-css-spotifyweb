@@ -5,8 +5,7 @@ body{
 }
 
 img {
-  width: 100%;
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
 }
 
@@ -46,7 +45,33 @@ img {
   width:200px;
   height: calc(100vh - 80px);
   background-color: black;
+}
 
+
+#SIDE_SECTION_SMALL{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  padding: 20px ;
+  width:50px;
+  height: calc(100vh - 80px);
+  background-color: black;
+  display: none;
+}
+
+
+#SIDE_SECTION_SMALL a{
+  min-width: 30px;
+}
+ #SIDE_SECTION_SMALL img{
+  min-width: 10px;
+}
+
+.small_logo{
+  width: 100%;
+  min-height: 30px;
+  display: block;
 }
 
 a {
@@ -73,6 +98,8 @@ a:hover{
 #home img {
   max-width: 25px;
 }
+
+
 
 
 .PLUS{
@@ -166,27 +193,12 @@ a:hover{
 
 
 
-#song_menu a::after{
-  display: block;
-  height: 3px;
-  width:40px;
-  background-color: rgba(173, 255, 47, 1 ) ;
-  margin:auto;
-  border-radius: 5px;
-  transition: .1s ;
-  opacity: 1;
 
 
-}
-
-.menu_item:hover a{
-  opacity: 1;
-}
-
-/* .menu_selected_01{
+.menu_selected{
   background: rgba(173, 255, 47, 1 ) ;
   text-align: center;
-
+  width: 40px;
   height: 3px;
   margin:auto;
   border-radius: 5px;
@@ -196,9 +208,9 @@ a:hover{
 
 
 
-.menu_item:hover .menu_item:last-child{
+.menu_item:hover .menu_selected{
   opacity: 1;
-} */
+}
 
 
 
@@ -259,9 +271,10 @@ flex-shrink: 0;
 
 
 .album_box{
-  flex-basis: calc(100% / 6)-15px;
+  padding:5px;
+  flex-basis: calc(100% / 6);
   text-align: center;
-  margin-right: 15px;
+
 
 
 }
@@ -469,80 +482,211 @@ flex-shrink: 0;
 
 /* **************************************  MEDIA QUERY  ************************** */
 
-/* ************* MENU SU DUE RIGHE***************** */
-@media screen and  (max-width: 700px) {
 
+
+/* **************VIEWPORT TRA 800 E 1200 *********************** */
+
+
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+
+/* * ***** ALBUM 4 SOPRA E 2 SOTTO**********  */
+  #album{
+    flex-wrap: wrap;
+  }
+
+  .album_box{
+    flex-basis: calc(100% / 4);
+  }
+
+  .titolo_album{
+    font-size: .8rem;
+  }
+}
+
+
+
+
+/* **************VIEWPORT TRA 640 E 799 *********************** */
+
+@media screen and (min-width: 640px) and (max-width: 799px) {
+
+  /* ************* MENU SU DUE RIGHE***************** */
   .menu{
     font-size:.6rem;
   }
   #song_menu{
     flex-wrap: wrap;
   }
-}
 
 
-
-
-/* * ************* ALBUM 4 SOPRA E 2 SOTTO*****************  */
-
-@media screen and (min-width: 800px) and (max-width: 1400px) {
-
+  /*  ******* ALBUM 2 SOPRA E 2 SOTTO**********   */
 
   #album{
-    flex-wrap: wrap;
-  }
+     flex-wrap: wrap;
+    }
 
   .album_box{
-    max-width: calc(100% / 4);
-    /* margin-right:60px; */
+   flex-basis: calc(100% / 2);
   }
 
   .titolo_album{
-    font-size: .8rem;
+   font-size: .4rem;
   }
 
 }
 
 
 
- /* ************* ALBUM 2 SOPRA E 2 SOTTO*****************  */
 
 
- @media screen and (max-width: 552px) {
 
 
-   #album{
+
+
+/* **************VIEWPORT TRA 500 E 638 *********************** */
+
+
+@media screen and (min-width: 500px) and (max-width: 639px){
+
+/* ************* MENU SU DUE RIGHE***************** */
+  .menu{
+    font-size:.6rem;
+  }
+  #song_menu{
+    flex-wrap: wrap;
+  }
+
+  /*  ******* ALBUM 2 SOPRA E 2 SOTTO**********   */
+
+  #album{
      flex-wrap: wrap;
-   }
+    }
 
-   .album_box{
-     max-width: calc((100% / 2)-10px);
-     /* margin-right:60px; */
-   }
+    .album_box{
+     flex-basis: calc(100% / 2);
+    }
 
-   .titolo_album{
-     font-size: .4rem;
-   }
-
-
-   #SIDE_SECTION{
-     width: 50px;
-     padding: 5px;
-     justify-content:space-between;
-   }
-
-   .big_logo{
-     display: none;
-   }
-   .small_logo{
-
-     display: block;
+    .titolo_album {
+     font-size: .2rem;
+    }
 
 
-   }
+}
 
-   #playlist{
-     display: none;
-   }
 
- }
+
+
+
+/* **************VIEWPORT FINO 500  *********************** */
+
+
+@media screen and (min-width: 2px) and (max-width: 499px) {
+
+/* ************* MENU SU DUE RIGHE***************** */
+  .menu{
+    font-size:.6rem;
+  }
+
+  #song_menu{
+    flex-wrap: wrap;
+  }
+
+
+
+  /*  ******* ALBUM 2 SOPRA E 2 SOTTO**********   */
+
+  #album{
+   flex-wrap: wrap;
+  }
+
+  .album_box{
+   flex-basis:100%;
+  }
+
+  .titolo_album{
+   font-size: .6rem;
+  }
+
+  /* * ***** SCOMPARSA SIDEBAR ********** tentativo modificandola  */
+  /* #SIDE_SECTION{
+    width: 50px;
+    padding:5px;
+  }
+
+  .big_logo{
+    display: none;
+  }
+
+  .small_logo{
+    display: block;
+  }
+
+  #home a{
+    display: none;
+  }
+
+  #home img{
+    display: flex;
+  }
+
+
+  #playlist a, #playlist h5{
+    display: none;
+  }
+
+  #installa a{
+    display: none;
+  }
+
+  #installa img{
+    flex-basis: 50%;
+    display: block;
+  }
+
+  #installa hr{
+    display: none;
+  } */
+
+
+
+  /* * ***** SCOMPARSA SIDEBAR ********** tentativo sosstituendola  */
+  #SIDE_SECTION_SMALL{
+    display:flex;
+    width: 40px;
+    padding:5px;
+  }
+
+  #SIDE_SECTION{
+    display:none;
+  }
+
+  #MAIN_SECTION{
+    width: calc(100vw - 40px);
+    margin-left: 40px;
+    background-color: #141922;
+    overflow: auto;
+  }
+
+  #song_menu{
+    max-width: calc(100vw - 40px);
+    
+  }
+
+  #UPGRADE{
+    width: calc(100vw - 40px);
+    /* position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5); */
+  }
+
+
+  }
+
+
+
+}
