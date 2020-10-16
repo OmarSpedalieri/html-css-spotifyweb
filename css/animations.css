@@ -1,0 +1,25 @@
+/* *****************TRANSIZIONE ICONA PLAY SU HOVER IMMAGINE************* */
+
+.album_box:hover {
+  cursor: pointer;
+}
+
+.album_box:hover .play_album {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.album_box:hover .immagine{
+  opacity: .3;
+}
+
+
+/* *****************TRANSIZIONE HOVER SU BARRA AVANZAMENTO************* */
+
+.barra_avanzamento:hover{
+  background: rgba(173, 255, 47, 1 ) ;
+}
+
+.barra_avanzamento:hover .pallino{
+  display:inline-block;
+} */

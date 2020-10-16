@@ -31,16 +31,6 @@ a:hover{
   color: white;
 }
 
-/* **************DEBUGGING ***************** */
-/* div, nav{
-  border: solid 1px red;
-
-} */
-
-
-
-/* **************  CREAZIONE MACROSTRUTTURA  ************** */
-
 
 /* ***************** SIDE SECTION BIG*********** */
 #SIDE_SECTION{
@@ -54,29 +44,23 @@ a:hover{
   background-color: black;
 }
 
-
- #home a, #playlist a,#installa a{
-   padding-left: 2px;
-   display: block;
-   font-weight: bold;
-   font-size: .5rem;
-   margin: 5px 0;
-   border-left: solid 3px black;
-
-   transition: .1s;
-
- }
+#home a, #playlist a,#installa a{
+ padding-left: 2px;
+ display: block;
+ font-weight: bold;
+ font-size: .5rem;
+ margin: 5px 0;
+ border-left: solid 3px black;
+ transition: .1s;
+}
 
  #home a:hover, #playlist a:hover,#installa a:hover{
-
    border-color:#b7fd47;
  }
 
- #home img {
-   max-width: 35px;
+#home img {
+   max-width: 30px;
  }
-
-
 
 
  .PLUS{
@@ -84,7 +68,7 @@ a:hover{
  }
 
  .logo{
-   max-width: 70%;
+   max-width:60%;
    height: auto;
    margin: 5% 0;
  }
@@ -126,19 +110,6 @@ a:hover{
   display: none;
 }
 
-
-#SIDE_SECTION_SMALL a{
-  width:30px;
-
-}
-
-.small_logo{
-  width: 100%;
-  min-height: 30px;
-  padding: 5px;
-
-}
-
 #home_small{
   position: relative;
   display: flex;
@@ -147,16 +118,25 @@ a:hover{
   color:white;
 }
 
+#SIDE_SECTION_SMALL a{
+  width:30px;
+}
+
+.small_logo{
+  width: 100%;
+  min-height: 30px;
+  padding: 5px;
+}
+
 #installa_small{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 #installa_small img{
-
   max-width: 15px;
-
 }
 
 
@@ -221,6 +201,7 @@ a:hover{
   padding: 0 20px;
   height: 80px;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 
@@ -248,9 +229,6 @@ a:hover{
 }
 
 
-
-
-
 .menu_selected{
   background: rgba(173, 255, 47, 1 ) ;
   text-align: center;
@@ -262,15 +240,9 @@ a:hover{
   opacity: 0;
 }
 
-
-
 .menu_item:hover .menu_selected{
   opacity: 1;
 }
-
-
-
-
 
 
 #SONGS{
@@ -288,17 +260,19 @@ a:hover{
   color:#7d7f84;
 }
 
-
-
-
+#raccolte{
+  padding: 10px 10px;
+}
 
 #album{
   display: flex;
   justify-content: flex-start;
-
-
-
 }
+
+#album h5, #album h3{
+  margin: 10px 0;
+}
+
 
 #song_menu{
   max-width: calc(100vw - 200px);
@@ -307,35 +281,15 @@ a:hover{
   align-items: baseline;
 }
 
-.menu_item{
-flex-shrink: 0;
-}
 
 
 
 
-
-#raccolte{
-  padding: 10px 10px;
-
-}
-
-
-
-
-
-#album h5, #album h3{
-  margin: 10px 0;
-}
-
-
+/* ********** CREAZIONE BOX CON COPERTINA, TITOLO E ARTISTA *********************** */
 .album_box{
   padding:5px;
   flex-basis: calc(100% / 6);
   text-align: center;
-
-
-
 }
 
 .titolo_album{
@@ -383,18 +337,7 @@ flex-shrink: 0;
   transition: .1s ;
 }
 
-.album_box:hover {
-  cursor: pointer;
-}
 
-.album_box:hover .play_album {
-  cursor: pointer;
-  opacity: 1;
-}
-
-.album_box:hover .immagine{
-  opacity: .3;
-}
 
 
 /* ***********************  BOTTOM SECTION************************* */
@@ -435,7 +378,7 @@ flex-shrink: 0;
   color:#7d7f84;
 }
 
-/* ********** CENTRAL PLAYER AND BARS****************** */
+/* ********** CENTRAL PLAYER AND PROGRESS BARS ****************** */
 #player{
 
   display: flex;
@@ -454,7 +397,6 @@ flex-shrink: 0;
   min-width: 25%;
   font-size: 1rem;
   min-height: 60%;
-
 }
 
 
@@ -467,13 +409,7 @@ flex-shrink: 0;
   width: 100%;
   min-width: 25%;
   min-height: 40%;
-  /* height: 30px; */
 }
-
-
-
-
-
 
 
 .player_icons{
@@ -481,6 +417,7 @@ flex-shrink: 0;
   font-size:1rem;
   color:white;
 }
+
 .PLAY{
   font-size: 2rem;
 }
@@ -515,13 +452,7 @@ flex-shrink: 0;
   display:none;
 }
 
-.barra_avanzamento:hover{
-  background: rgba(173, 255, 47, 1 ) ;
-}
 
-.barra_avanzamento:hover .pallino{
-  display:inline-block;
-}
 
 /* ********** VOLUME RIGHT SIDE****************** */
 
@@ -538,9 +469,7 @@ flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* align-items: center; */
   width: 200px;
-  /* padding: 5px 5px; */
 }
 
 
@@ -609,7 +538,7 @@ flex-shrink: 0;
 
 
 
-/* **************VIEWPORT TRA 500 E 638 *********************** */
+/* **************VIEWPORT TRA 551 E 638 *********************** */
 
 
 @media screen and (min-width: 551px) and (max-width: 639px){
@@ -625,16 +554,16 @@ flex-shrink: 0;
   /*  ******* ALBUM 2 SOPRA E 2 SOTTO**********   */
 
   #album{
-     flex-wrap: wrap;
-    }
+   flex-wrap: wrap;
+  }
 
-    .album_box{
-     flex-basis: calc(100% / 2);
-    }
+  .album_box{
+   flex-basis: calc(100% / 2);
+  }
 
-    .titolo_album {
-     font-size: .2rem;
-    }
+  .titolo_album {
+   font-size: .2rem;
+  }
 
 
 }
@@ -674,11 +603,10 @@ flex-shrink: 0;
   }
 
 
-  /* * ***** SCOMPARSA SIDEBAR ********** tentativo sosstituendola  */
+  /* * ***** SOSTITUZIONE  SIDEBAR  CON VERSIONE PICCOLA ********** */
   #SIDE_SECTION_SMALL{
     display:flex;
     width: 40px;
-
   }
 
   #SIDE_SECTION{
@@ -694,12 +622,10 @@ flex-shrink: 0;
 
   #song_menu{
     max-width: calc(100vw - 40px);
-
   }
 
   #UPGRADE{
     width: calc(100vw - 40px);
-
   }
 
 
