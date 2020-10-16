@@ -56,10 +56,20 @@ a:hover{
 
 
  #home a, #playlist a,#installa a{
+   padding-left: 2px;
    display: block;
    font-weight: bold;
    font-size: .5rem;
    margin: 5px 0;
+   border-left: solid 3px black;
+
+   transition: .1s;
+
+ }
+
+ #home a:hover, #playlist a:hover,#installa a:hover{
+
+   border-color:#b7fd47;
  }
 
  #home img {
@@ -74,7 +84,7 @@ a:hover{
  }
 
  .logo{
-   width: 70%;
+   max-width: 70%;
    height: auto;
    margin: 5% 0;
  }
@@ -150,18 +160,44 @@ a:hover{
 }
 
 
+/* ******************** MODIFICA ASPETTO SCROLLBAR ********************* */
 
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 2px none #e60a0a;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b7fd47;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #b7fd47;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #000000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 
-
-
-
-
-
-
-
-
-
+  /* ******************** FINE MODIFICA ASPETTO SCROLLBAR ********************* */
 
 
 
@@ -195,20 +231,20 @@ a:hover{
   font-size: .5rem;
   font-weight: bold;
 
-  padding-top: 10px;
-  width: 200px;
-  min-height: 35px;
+  padding-top: 8px;
+  width: 150px;
+  min-height: 30px;
   border: solid 1px white;
-  border-radius: 20px;
+  border-radius: 25px;
   transition: transform 0.3s;
 }
 
 #upgrade_button:hover{
   text-align: center;
   cursor: pointer;
-  width: 210px;
-  height: 45px;
-  padding-top: 13px;
+  width: 180px;
+  height: 35px;
+  padding-top: 10px;
 }
 
 
