@@ -67,6 +67,8 @@ a:hover{
  }
 
 
+
+
  .PLUS{
   font-size: 30px;
  }
@@ -421,6 +423,7 @@ flex-shrink: 0;
 
 
 #barra_player{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -430,6 +433,12 @@ flex-shrink: 0;
   min-height: 40%;
   /* height: 30px; */
 }
+
+
+
+
+
+
 
 .player_icons{
   margin: 0 10px;
@@ -459,6 +468,24 @@ flex-shrink: 0;
   background-color: #c1c1c1;
 }
 
+.pallino{
+  position: absolute;
+  right: 0;
+  transform: translateY(-3px);
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  display:none;
+}
+
+.barra_avanzamento:hover{
+  background: rgba(173, 255, 47, 1 ) ;
+}
+
+.barra_avanzamento:hover .pallino{
+  display:inline-block;
+}
 
 /* ********** VOLUME RIGHT SIDE****************** */
 
@@ -549,7 +576,7 @@ flex-shrink: 0;
 /* **************VIEWPORT TRA 500 E 638 *********************** */
 
 
-@media screen and (min-width: 500px) and (max-width: 639px){
+@media screen and (min-width: 551px) and (max-width: 639px){
 
 /* ************* MENU SU DUE RIGHE***************** */
   .menu{
@@ -580,10 +607,10 @@ flex-shrink: 0;
 
 
 
-/* **************VIEWPORT FINO 500  *********************** */
+/* **************VIEWPORT FINO 550  *********************** */
 
 
-@media screen and (min-width: 2px) and (max-width: 499px) {
+@media screen and (min-width: 2px) and (max-width: 550px) {
 
 /* ************* MENU SU DUE RIGHE***************** */
   .menu{
@@ -603,7 +630,7 @@ flex-shrink: 0;
   }
 
   .album_box{
-   flex-basis:100%;
+   flex-basis: calc(100% / 2);
   }
 
   .titolo_album{
